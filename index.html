@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Feedback Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page" id="page">
+    <div class="container">
+      <h1>User Feedback Form</h1>
+      <p class="subtitle">Share your feedback below.</p>
+
+      <form id="feedback-form" novalidate>
+        <div class="form-group">
+          <label for="username">Name</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            data-tooltip="Enter your full name."
+            placeholder="Your name"
+          />
+          <small class="validation-message" id="username-error"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            data-tooltip="Enter a valid email address."
+            placeholder="you@example.com"
+          />
+          <small class="validation-message" id="email-error"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="comments">Comments</label>
+          <textarea
+            id="comments"
+            name="comments"
+            rows="5"
+            maxlength="250"
+            data-tooltip="Type your feedback here. Max 250 characters."
+            placeholder="Write your comments..."
+          ></textarea>
+          <div class="char-count">
+            Characters: <span id="char-count">0</span>/250
+          </div>
+          <small class="validation-message" id="comments-error"></small>
+        </div>
+
+        <button type="submit" id="submit-btn">Submit Feedback</button>
+      </form>
+
+      <div id="tooltip" class="tooltip hidden"></div>
+
+      <section class="feedback-section">
+        <h2>Submitted Feedback</h2>
+        <div id="feedback-display"></div>
+      </section>
+    </div>
+  </div>
+
+  <script src="cp_1.js"></script>
+</body>
+</html>
