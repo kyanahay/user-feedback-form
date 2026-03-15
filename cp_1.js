@@ -15,6 +15,7 @@ commentsField.addEventListener("input", function () {
   charCount.textContent = commentsField.value.length;
 });
 
+
 form.addEventListener("mouseover", function (event) {
   if (event.target.matches("input, textarea")) {
     tooltip.textContent = event.target.dataset.tooltip;
@@ -26,11 +27,13 @@ form.addEventListener("mouseover", function (event) {
   }
 });
 
+
 form.addEventListener("mouseout", function (event) {
   if (event.target.matches("input, textarea")) {
     tooltip.classList.add("hidden");
   }
 });
+
 
 form.addEventListener("keydown", function (event) {
   if (event.key === "Escape") {
@@ -45,6 +48,7 @@ form.addEventListener("click", function (event) {
 document.body.addEventListener("click", function () {
   tooltip.classList.add("hidden");
 });
+
 
 function validateForm() {
   let isValid = true;
@@ -71,6 +75,7 @@ function validateForm() {
   return isValid;
 }
 
+
 function appendFeedback(name, email, comment) {
   const card = document.createElement("div");
   card.classList.add("feedback-card");
@@ -92,6 +97,7 @@ function appendFeedback(name, email, comment) {
 
   feedbackDisplay.appendChild(card);
 }
+
 
 form.addEventListener("submit", function (event) {
   event.preventDefault();
