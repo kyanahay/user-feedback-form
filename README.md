@@ -1,82 +1,72 @@
-# Product Dashboard (Vanilla JavaScript)
+# Feedback Form Application
 
 ## Description
-This project is a simple product dashboard built using vanilla JavaScript. It fetches product data from an external API and displays a limited set of products dynamically on the page.
+This project is an interactive feedback form built using HTML, CSS, and JavaScript. It allows users to submit feedback, validates input fields, and dynamically displays submitted responses on the page.
 
-The purpose of this project is to demonstrate working with asynchronous JavaScript, API data, DOM manipulation, and basic UI styling.
-
-## API Used
-Data is retrieved from:  
-https://www.course-api.com/javascript-store-products
+The goal of this project is to demonstrate form handling, validation, DOM manipulation, and user interaction.
 
 ## Features
-- Fetches product data from an external API  
-- Uses both:
-  - Promise-based `.then()` syntax  
-  - `async/await` syntax  
-- Displays the first 5 products  
-- Each product includes:
-  - Name  
-  - Image  
-  - Price (formatted to dollars)  
-- Handles errors if the API request fails  
-- Styled interface with a clean and modern layout  
-- Responsive design for different screen sizes  
+- Real-time character count for comments
+- Form validation for required fields
+- Dynamic display of submitted feedback
+- Tooltip guidance for form inputs
+- Click and keyboard interactions for tooltip control
+- Styled feedback cards for submitted entries
+- Clean and responsive UI design
 
 ## Technologies Used
 - HTML5  
 - CSS3  
-- JavaScript (Vanilla JS)
+- JavaScript  
 
 ## File Structure
-- `index.html` – Main structure of the page  
-- `style.css` – Styling for layout, components, and responsiveness  
-- `script.js` – JavaScript logic for fetching and displaying products  
+- `index.html` – Form structure and layout  
+- `style.css` – Styling, layout, and responsiveness  
+- `script.js` – Form logic, validation, and interactivity  
+
+## Functionality
+
+### Form Validation
+- Ensures all fields (name, email, comments) are completed  
+- Displays error messages if inputs are missing  
+
+### Character Counter
+- Updates in real time as the user types in the comments field  
+
+### Tooltip System
+- Displays helpful hints when hovering over input fields  
+- Hides on mouseout, Escape key, or clicking outside the form  
+
+### Feedback Display
+- Submitted feedback is dynamically added to the page  
+- Each submission is shown as a styled card including:
+  - Name  
+  - Email  
+  - Comment  
 
 ## Key Functions
 
-### `fetchProductsThen()`
-Uses `.then()` and `.catch()` to fetch and process API data.
+### `validateForm()`
+Checks if all required fields are filled and displays error messages.
 
-### `fetchProductsAsync()`
-Uses `async/await` to fetch and process API data.
-
-### `displayProducts(products)`
-- Selects the product container from the DOM  
-- Clears existing content  
-- Creates product cards dynamically  
-- Displays product name, image, and price  
-
-### `handleError(error)`
-Logs errors to the console if something goes wrong.
-
-## How It Works
-1. The application sends a request to the API.  
-2. It checks if the response is valid.  
-3. The data is converted into JSON format.  
-4. The first five products are extracted and displayed.  
-5. If an error occurs, it is handled and logged.
+### `appendFeedback(name, email, comment)`
+Creates and displays a new feedback card in the UI.
 
 ## How to Run
-1. Clone or download the repository  
-2. Open `index.html` in your browser  
-3. Products will automatically load on page open  
+1. Download or clone the repository  
+2. Open `index.html` in a web browser  
+3. Fill out the form and submit feedback  
 
 ## Concepts Demonstrated
-- Fetch API  
-- Promises (`.then()` / `.catch()`)  
-- Async/Await  
-- Error handling  
 - DOM manipulation  
-- Array methods (`forEach`, `slice`)  
-- Working with objects  
-- Basic CSS layout and responsiveness  
+- Event handling  
+- Form validation  
+- Dynamic content rendering  
+- CSS layout and responsiveness  
 
 ## Notes
-- Only the first 5 products are displayed for simplicity  
-- Prices are converted from cents to dollars  
-- No external libraries or frameworks are used  
-- Styling enhances usability and visual presentation  
+- Front-end only project (no backend)  
+- Data is not stored permanently  
 
 ## Author
 Kyana Hay
